@@ -17,11 +17,8 @@
 
 .category-list {
   position: relative;
-  width: 150px;
-  margin-right: 200px;
+  width: 100%;
   padding: 10px;
-  float: right;
-  clear: both;
 }
 
 .product-listing {
@@ -35,6 +32,8 @@
 }
 
 .product-image-modal {
+  width: 200px;
+  height: 200px;
   margin-right: 10px;
   float: left;
 }
@@ -319,4 +318,14 @@ footer {
 .slides h5 {
   font-size: 22px;
   color:white;
+}
+
+.category-badge {
+  padding: 5px;
+  background-color: lightblue;
+  margin: 5px;
+  cursor: pointer;
+  float: left;
+  color: white;
+  border-radius: 3px;
 }

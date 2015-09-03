@@ -1,10 +1,7 @@
-<div class="product-item-wrapper">
-  {{#each model.images as |image|}}
-        <a href={{image.imgUrl}}>
-          <img class="product-image" src={{image.imgUrl}} style="width: 200px; height: 300px;">
-        </a>
-  {{/each}}
+<div class="product-item-wrapper" style="float: left;">
+          <img class="product-image" src={{model.images.firstObject.imageUrl}} style="width: 200px; height: 200px;">
   <h3>{{model.title}}</h3><br/>
+  <button {{action 'bookHer' model}}>Book</button>
   <div class="item-description">
     {{model.description}}<br/><br/>
     Price: ${{model.price}}<br/>
@@ -12,3 +9,35 @@
   </div>
 
 </div>
+<div style="margin: 10px; width:700px; float:right;">
+{{as-calendar
+  title="Nanny's Calendar"
+  occurrences=events
+  defaultTimeZoneQuery="New York|London|Dubai|Hong Kong"
+  dayStartingTime="9:00"
+  dayEndingTime="18:00"
+  timeSlotDuration="01:00"}}
+</div>
+{{#if isBooking}}
+{{#md-modal close='closeModal'}}
+    <div class="modal-content">
+        <h4>Nanny: {{model.title}}</h4>
+        <p>
+          {{model.description}}<br/><br/>
+          Total Price: $125<br/>
+          What time do you want to book?
+          {{pick-a-date date=date placeholder="Pick a date"}}
+          {{pick-a-time date=startdate placeholder="Starting at"}}
+          {{pick-a-time date=enddate placeholder="Ending at"}}
+        </p>
+    </div>
+    <div class="modal-footer">
+        <a class="modal-action modal-close waves-effect waves-orange btn-flat agree-button" {{action 'agree'}}>
+            Done!
+        </a>
+        <a class="modal-action modal-close waves-effect waves-red btn-flat cancel-button" {{action 'closeModal'}}>
+            Cancel
+        </a>
+    </div>
+{{/md-modal}}
+{{/if}}

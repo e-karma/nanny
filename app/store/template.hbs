@@ -1,11 +1,10 @@
 <div class="category-list">
 
-  <select>
-    <option {{action 'sortByAll'}}>All Products</option>
+    <span class="category-badge"{{action 'sortByAll'}}>All Nannies</span>
     {{#each model as |category|}}
-      <option {{action 'sortByCategory' category.id}}>{{category.name}}</option>
+      <span class="category-badge"{{action 'sortByCategory' category.id}}>{{category.name}}</span>
     {{/each}}
-  </select>
+
 
 </div>
 <br/><br/><br/>

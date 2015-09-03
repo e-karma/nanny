@@ -21,7 +21,8 @@
     "spinjs": "2.0.1",
     "tooltipster": "3.3.0",
     "trackpad-scroll-emulator": "1.0.8",
-    "ember-simple-auth": "0.8.0"
+    "ember-simple-auth": "0.8.0",
+    "pickadate": "~3.5.6"
   },
   "resolutions": {
     "jquery": "^1.11.1"

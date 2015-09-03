@@ -4,10 +4,6 @@ export default Ember.Controller.extend({
   modalIsOpen: false,
   modalproduct: null,
 
-  imageUrl: function() {
-      return "http://localhost:3000" + this.get('model.image');
-    }.property('model'),
-
   actions: {
     openModal: function(product) {
       this.set('modalIsOpen', true);
@@ -20,6 +16,15 @@ export default Ember.Controller.extend({
 
     closeModal: function() {
       this.set('modalIsOpen', false);
-    }
+    },
+
+      sortByCategory: function(category) {
+        this.transitionToRoute('store.category', category);
+      },
+
+      sortByAll: function() {
+        this.transitionToRoute('store.index');
+      }
+
   }
 });

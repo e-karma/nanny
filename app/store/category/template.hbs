@@ -2,7 +2,7 @@
   <div class="product-listing">
   {{#each model as |product|}}
     <div class="product-card">
-      <img src="http://placehold.it/200x200">
+      <img src={{product.images.firstObject.imageUrl}}>
       <p style="text-align: center;">
         <strong>{{product.title}}</strong> / Description<br/>
         ${{product.price}}
