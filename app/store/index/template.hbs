@@ -3,7 +3,7 @@
   {{#each products as |product|}}
     <div class="product-card">
       <span class="quick-view-product" {{action 'openModal' product}}>Quick View</span>
-      <div class="product-link-to" {{action 'redirectToItem' product}}>
+      <div class="product-link-to" {{action 'redirectToItem' product.id}}>
         <img class="product-image" src={{product.images.firstObject.imageUrl}}>
         <p style="text-align: center;">
           <strong>{{product.title}}</strong> / Description<br/>

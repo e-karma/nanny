@@ -8,6 +8,10 @@ export default Ember.Controller.extend({
 
     sortByAll: function() {
       this.transitionToRoute('store.index');
+    },
+
+    redirectToItem: function(product) {
+      this.transitionTo('store.show', product);
     }
   }
 });

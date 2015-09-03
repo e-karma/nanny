@@ -2,11 +2,14 @@
   <div class="product-listing">
   {{#each model as |product|}}
     <div class="product-card">
-      <img src={{product.images.firstObject.imageUrl}}>
-      <p style="text-align: center;">
-        <strong>{{product.title}}</strong> / Description<br/>
-        ${{product.price}}
-      </p>
+      <span class="quick-view-product" {{action 'openModal' product}}>Quick View</span>
+      <div class="product-link-to" {{action 'redirectToItem' product.id}}>
+        <img class="product-image" src={{product.images.firstObject.imageUrl}}>
+        <p style="text-align: center;">
+          <strong>{{product.title}}</strong> / Description<br/>
+          ${{product.price}}
+        </p>
+      </div>
     </div>
   {{/each}}
 </div>
