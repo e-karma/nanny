@@ -5,12 +5,6 @@ module.exports = function(defaults) {
   var app = new EmberApp(defaults, {
     // Add options here
 
-    inlineContent: {
-      'olark' : {
-        file: './olark.js',
-        attrs: { 'data-cfasync' : true }
-      }
-    }
   });
 
   // Use `app.import` to add additional libraries to the generated

@@ -1,11 +1,11 @@
-@import 'addons/ewd-calendar/main';
 @import "bower_components/materialize/dist/css/materialize";
 @import "ember-cli-materialize";
 @import "custom";
+@import 'addons/ewd-calendar/main';
 
 img.activator {
-  height:500px;
-  width:500px;
+  height:200px;
+  width:200px;
 }
 
 body {
