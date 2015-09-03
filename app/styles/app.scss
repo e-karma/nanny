@@ -1,4 +1,5 @@
-@import "materialize";
+@import "bower_components/materialize/dist/css/materialize";
+@import 'addons/ewd-calendar/main';
 @import "base";
 @import "ember-cli-materialize";
 @import "custom";

@@ -17,6 +17,7 @@ Router.map(function() {
   this.route('photos');
   this.route('book');
   this.route('contact');
+  this.route('booking');
 });
 
 export default Router;
