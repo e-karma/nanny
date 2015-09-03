@@ -38,7 +38,6 @@
     "ember-cli-slick": "git+https://github.com/igorpreston/ember-cli-slick.git#b7555212e30cc61543bfea0952c0ceb3c8c83be0",
     "ember-cli-sri": "^1.0.1",
     "ember-cli-uglify": "^1.0.1",
-    "ember-component-css": "0.1.4",
     "ember-composability": "0.0.6",
     "ember-data": "1.13.7",
     "ember-disable-proxy-controllers": "^1.0.0",
