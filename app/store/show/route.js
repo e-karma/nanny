@@ -4,7 +4,7 @@ export default Ember.Route.extend({
   model: function(params) {
     return Ember.RSVP.hash({
       product: this.store.findRecord('product', params.product_id),
-      events: this.store.query('event', { user_id: params.product_id } )
+      events: this.store.findAll('event')
     });
   },
 
