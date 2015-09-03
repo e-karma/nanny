@@ -1,0 +1,119 @@
+// html, body {
+//   margin: 0;
+//   padding: 0;
+// }
+
+.ember-carousel {
+  position: relative;
+  width: 100%;
+  height: 350px;
+  z-index: 10;
+}
+
+.slick-dots {
+  position: relative;
+  margin-top:-100px;
+  // top: -200px;
+  // bottom:0;
+  // right:0;
+  // z-index: 10;
+}
+
+.category-list {
+  position: relative;
+  width: 150px;
+  margin-right: 200px;
+  padding: 10px;
+  float: right;
+  clear: both;
+}
+
+.product-listing {
+  position: relative;
+  min-width: 600px;
+  max-width: 1000px;
+  padding: 10px;
+  height: auto;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.product-image-modal {
+  margin-right: 10px;
+  float: left;
+}
+.product-card {
+  position: relative;
+  width: 200px;
+  margin: 20px;
+  float: left;
+  display: inline-block;
+
+  .product-link-to {
+    cursor: pointer;
+  }
+
+  .quick-view-product {
+    position: absolute;
+    top:15px;
+    right:0;
+    padding: 10px;
+    color: white;
+    background-color: lightgray;
+    z-index: 5;
+    font-size: 13px;
+    transition: background-color 0.2s ease-out;
+
+    &:hover {
+      background-color: #A9A9A9;
+      transition: background-color 0.3s ease-in;
+      cursor: pointer;
+    }
+  }
+
+  .product-image {
+    z-index: 3;
+
+  }
+
+}
+
+.product-item-wrapper {
+  position: relative;
+  padding: 25px 100px;
+
+  h3 {
+    position: relative;
+    margin: 0 50px;
+    padding: 0;
+    display: inline-block;
+
+  }
+
+  .item-description {
+    position: relative;
+    padding: 0;
+    margin: 25px 60px;
+    display: inline-block;
+    font-size: 16px;
+  }
+}
+
+.product-image {
+  position: relative;
+  float: left;
+}
+
+a {
+  .product-card {
+    color: black;
+  }
+}
+
+select {
+  display: inline-block;
+}
+
+.media-wrapper {
+  text-align: center;
+}

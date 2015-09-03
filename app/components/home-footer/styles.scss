@@ -1,0 +1,25 @@
+& {
+
+}
+footer {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-justify-content: space-around;
+    justify-content: space-around;
+    min-height: 20vh;
+    color: #fff;
+  }
+.footer-item {
+  width: 250px;
+  height: 100px;
+  margin: 10px 0;
+  text-align: center;
+}
+.fa {
+  font-size: 300%;
+  color:red;
+  margin-top:1em;
+}

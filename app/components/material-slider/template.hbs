@@ -1,0 +1,30 @@
+<div class="slider">
+    <ul class="slides">
+      <li>
+        <img src="http://lorempixel.com/580/250/nature/1"> <!-- random image -->
+        <div class="caption center-align">
+          <h3>Sierra Sitters New Website!</h3>
+          <h5 class="light grey-text text-lighten-3">Qualified, Affordable Nannies in the comfort of your own home. </h5>
+          {{#link-to 'book'}}<button class="btn-large">Book Today</button>{{/link-to}}
+        </div>
+      </li>
+      <li>
+        <img src="http://lorempixel.com/580/250/nature/2"> <!-- random image -->
+        <div class="caption left-align">
+          <h3>All Sitters Are Pre-screened</h3>
+          <h5 class="light grey-text text-lighten-3">Trustline Provides Security</h5>
+          {{#link-to 'store'}}<button class="btn-large">View Sitters</button>{{/link-to}}
+          <!-- <button type="button" name="button">Visit Link</button> -->
+        </div>
+      </li>
+      <li>
+        <img src="http://lorempixel.com/580/250/nature/3"> <!-- random image -->
+        <div class="caption right-align">
+          <h3>Other Questions or Concerns?</h3>
+          <h5 class="light grey-text text-lighten-3">Talk to Someone</h5>
+          {{#link-to 'contact'}}<button class="btn-large">Contact Us</button>{{/link-to}}
+        </div>
+      </li>
+    </ul>
+  </div>
+  {{yield}}

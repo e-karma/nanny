@@ -1,0 +1,12 @@
+<div class="product-listing">
+{{#each model as |post|}}
+  <div class="product-card">
+    {{#link-to 'blog.show' post}}{{post.title}}{{/link-to}}
+    {{post.subtitle}}
+    {{post.body}}
+    {{#each post.tags as |tag|}}
+      {{tag.name}}
+    {{/each}}
+  </div>
+{{/each}}
+</div>

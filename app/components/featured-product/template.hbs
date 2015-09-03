@@ -1,0 +1,24 @@
+{{yield}}
+<div class="row">
+  <div class="col s3">
+    {{#md-card title="My Product"
+        image="http://placehold.it/200x200"
+        activator=true
+        id="card-reveal"}}
+        {{#md-card-content}}
+            {{#link-to "store"}}Link To Prod{{/link-to}}
+        {{/md-card-content}}
+        {{#md-card-reveal}}
+            Here is some more information about this product that is only revealed once clicked on.
+        {{/md-card-reveal}}
+    {{/md-card}}
+  </div>
+  <div class="col s9 padding3">
+    <h4>The Name & Title of My Featured Product</h4>
+    <p>HCR Racing is introducing a new proprietary material with teh releaes of the elite
+       series suspension system.  The same proven strength and engineering from HCR's Pro kit
+        has been red-designed for Sand nad Dune Enthusiasts.  This unique
+       custom alloy, created for the Elite series, produces unmatched strength while adding
+       minimal weight.</p>
+  </div>
+</div>

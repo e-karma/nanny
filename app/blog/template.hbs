@@ -1,0 +1,8 @@
+<div class="category-list">
+  {{#link-to 'blog.index'}}All Posts{{/link-to}}<br/>
+  {{#each model as |tag|}}
+    {{#link-to 'blog.tag' tag.id}}{{tag.name}}{{/link-to}}<br/>
+  {{/each}}
+</div>
+
+{{outlet}}

@@ -1,0 +1,13 @@
+{{#store-layout}}
+  <div class="product-listing">
+  {{#each model as |product|}}
+    <div class="product-card">
+      <img src="http://placehold.it/200x200">
+      <p style="text-align: center;">
+        <strong>{{product.title}}</strong> / Description<br/>
+        ${{product.price}}
+      </p>
+    </div>
+  {{/each}}
+</div>
+{{/store-layout}}

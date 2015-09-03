@@ -1,0 +1,14 @@
+<div class="product-item-wrapper">
+  {{#each model.images as |image|}}
+        <a href={{image.imgUrl}}>
+          <img class="product-image" src={{image.imgUrl}} style="width: 200px; height: 300px;">
+        </a>
+  {{/each}}
+  <h3>{{model.title}}</h3><br/>
+  <div class="item-description">
+    {{model.description}}<br/><br/>
+    Price: ${{model.price}}<br/>
+    {{#if model.inStock}}<span style="color: green;">In Stock</span>{{else}}<span style="color: red;">Out of Stock</span>{{/if}}
+  </div>
+
+</div>

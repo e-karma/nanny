@@ -1,0 +1,12 @@
+<div class="category-list">
+
+  <select>
+    <option {{action 'sortByAll'}}>All Products</option>
+    {{#each model as |category|}}
+      <option {{action 'sortByCategory' category.id}}>{{category.name}}</option>
+    {{/each}}
+  </select>
+
+</div>
+<br/><br/><br/>
+{{outlet}}

@@ -1,0 +1,37 @@
+{{#store-layout}}
+  <div class="product-listing">
+  {{#each products as |product|}}
+    <div class="product-card">
+      <span class="quick-view-product" {{action 'openModal' product}}>Quick View</span>
+      <div class="product-link-to" {{action 'redirectToItem' product}}>
+        <img class="product-image" src="http://placehold.it/200x200">
+        <p style="text-align: center;">
+          <strong>{{product.title}}</strong> / Description<br/>
+          ${{product.price}}
+        </p>
+      </div>
+    </div>
+  {{/each}}
+  </div>
+{{/store-layout}}
+{{#if modalIsOpen}}
+    {{#md-modal close='closeModal'}}
+        <div class="modal-content">
+          <img class="product-image-modal" src="http://placehold.it/200x200">
+            <h4>{{modalproduct.title}}</h4>
+            <p>
+              {{modalproduct.description}}<br/><br/>
+              Price: ${{modalproduct.price}}<br/>
+              {{#if modalproduct.inStock}}<span style="color: green;">In Stock</span>{{else}}<span style="color: red;">Out of Stock</span>{{/if}}<br><br>{{#link-to 'store.show' modalproduct}}View full details{{/link-to}}
+            </p>
+        </div>
+        <div class="modal-footer">
+            <a class="modal-action modal-close waves-effect waves-orange btn-flat agree-button" {{action 'agree'}}>
+                Done!
+            </a>
+            <a class="modal-action modal-close waves-effect waves-red btn-flat cancel-button" {{action 'closeModal'}}>
+                Cancel
+            </a>
+        </div>
+    {{/md-modal}}
+{{/if}}
