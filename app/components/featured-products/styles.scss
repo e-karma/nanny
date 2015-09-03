@@ -21,12 +21,15 @@
 .featured-products .item {
     flex: 1;
     margin: 50px 20px 0px 20px;
+
 }
 .item {
     width: 250px;
     height: 200px;
     background: #ECECEC;
     z-index: 10;
+    overflow:hidden;
+
 }
 
 .featured-products-text {
