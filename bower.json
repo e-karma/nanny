@@ -11,7 +11,12 @@
     "loader.js": "ember-cli/loader.js#3.2.0",
     "slick-carousel": "~1.5.8",
     "materialize": "~0.97.0",
-    "font-awesome": "~4.4.0"
+    "font-awesome": "~4.4.0",
+    "interact": "1.2.4",
+    "jquery-simulate": "1.0.1",
+    "lodash": "3.10.0",
+    "moment": "2.10.2",
+    "moment-timezone": "0.4.0"
   },
   "resolutions": {
     "jquery": "^1.11.1"

@@ -34,7 +34,6 @@
     "ember-cli-inject-live-reload": "^1.3.0",
     "ember-cli-materialize": "0.17.3",
     "ember-cli-release": "0.2.3",
-    "ember-cli-sass": "3.3.1",
     "ember-cli-slick": "git+https://github.com/igorpreston/ember-cli-slick.git#b7555212e30cc61543bfea0952c0ceb3c8c83be0",
     "ember-cli-sri": "^1.0.1",
     "ember-cli-uglify": "^1.0.1",
@@ -47,6 +46,8 @@
     "ember-new-computed": "1.0.2",
     "ember-radio-button": "1.0.4",
     "ember-sliding-tab-bar": "0.0.6",
+    "ewd-calendar": "git+https://github.com/e-karma/ewd-calendar.git#625926aaa70ae90f048b12bc381b3c143a608d46",
+    "ewd-sass": "git+https://github.com/e-karma/ewd-sass.git#66fbc6041cf6eeb649f43c797ab8d541877cf7a4",
     "liquid-fire": "0.21.2"
   }
 }
