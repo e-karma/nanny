@@ -14,6 +14,10 @@ Router.map(function() {
     this.route('show', { path: 'products/:product_id' } );
     this.route('category', { path: 'categories/:category_id' } );
   });
+
+  this.route('login');
+  this.route('signup');
+  
   this.route('photos');
   this.route('book');
   this.route('contact');

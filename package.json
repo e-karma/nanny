@@ -36,6 +36,7 @@
     "ember-cli-materialize": "0.17.3",
     "ember-cli-paint": "1.12.1",
     "ember-cli-release": "0.2.3",
+    "ember-cli-simple-auth": "0.8.0",
     "ember-cli-slick": "git+https://github.com/igorpreston/ember-cli-slick.git#b7555212e30cc61543bfea0952c0ceb3c8c83be0",
     "ember-cli-sri": "^1.0.1",
     "ember-cli-uglify": "^1.0.1",
