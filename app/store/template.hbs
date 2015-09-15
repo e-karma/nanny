@@ -1,4 +1,35 @@
-<div class="category-list">
+<br>
+<div class="nanny-search-container z-depth-1">
+  <div class="row">
+    <div class="col s3">
+      {{md-input label='Enter City' validate=true}}
+    </div>
+    <div class="col s2">
+      {{ember-chosen
+        content=categories
+        optionLabelPath="name"
+        optionValuePath="id"
+        placeholder="Select Categories"
+        multiple=true
+        class="input-field"
+        }}
+    </div>
+    <div class="col s1">
+      {{md-input-date label='Start'}}
+    </div>
+    <div class="col s1">
+      {{md-input-date label='End'}}
+    </div>
+    <div class="col s1">
+      {{md-range value=rangeValue min=50 name="" class="input-field"}}
+    </div>
+    <div class="col s1 offset-s2">
+      {{md-btn text='Search' class='blue-grey darken-1 input-field'}}
+    </div>
+  </div>
+</div>
+
+<!-- <div class="category-list">
 
     <span class="category-badge"{{action 'sortByAll'}}>All Nannies</span>
     {{#each model as |category|}}
@@ -6,6 +37,6 @@
     {{/each}}
 
 
-</div>
-<br/><br/><br/>
+</div> -->
+<br/>
 {{outlet}}
