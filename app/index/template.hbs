@@ -1,7 +1,27 @@
 
   {{#material-slider}}
   {{/material-slider}}
+  {{#link-to 'clients.new'}}{{md-btn text='Client Application' class='blue-grey darken-1'}}{{/link-to}}
+  {{#link-to 'nannies.new'}}{{md-btn text='Nanny Application' class='blue-grey darken-1'}}{{/link-to}}
 
+  <!-- {{#if modalIsOpen}}
+      {{#md-modal close='closeModal' class="test-modal"}}
+          <div class="modal-content">
+              <h4>Ohai there!</h4>
+              <p>Star ember-cli-materialize if you love it on
+              <a href="https://github.com/truenorth/ember-cli-materialize">github</a>!
+              </p>
+          </div>
+          <div class="modal-footer">
+              <a class="modal-action modal-close waves-effect waves-orange btn-flat agree-button" {{action 'agree'}}>
+                  Done!
+              </a>
+              <a class="modal-action modal-close waves-effect waves-red btn-flat cancel-button" {{action 'closeModal'}}>
+                  Cancel
+              </a>
+          </div>
+      {{/md-modal}}
+  {{/if}} -->
 {{featured-products}}
 {{section-2}}
 {{featured-product}}

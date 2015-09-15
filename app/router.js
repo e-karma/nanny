@@ -17,11 +17,17 @@ Router.map(function() {
 
   this.route('login');
   this.route('signup');
-  
+
   this.route('photos');
   this.route('book');
   this.route('contact');
   this.route('booking');
+  this.route('clients', function() {
+    this.route('new');
+  });
+  this.route('nannies', function() {
+    this.route('new');
+  });
 });
 
 export default Router;
