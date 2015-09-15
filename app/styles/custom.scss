@@ -347,8 +347,40 @@ footer.footer-container{
   height:250px;
 }
 .home-apply-client {
-  
+
 }
 .home-apply-nanny {
 
+}
+
+
+
+.parent
+{
+  margin:0px;
+  padding:0px;
+	height: 200px;
+  position: relative;
+}
+
+.scrollContainer {
+	position: absolute;
+	border: grey solid;
+    bottom:0px;
+    top:55px;
+    left:0px;
+    right: 0px;
+  background-color: white;
+}
+
+.innerScroll {
+  line-height:14px;
+  font-size:10px;
+	position: absolute;
+	overflow-y: auto;
+	top: 0px;
+	bottom: 0px;
+	left: 0px;
+	right: 0px;
+  height: 100%;
 }

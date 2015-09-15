@@ -8,25 +8,119 @@
 {{else}}
 <!-- <form id="category-form" class="create-form" {{action 'add' on="submit"}}> -->
 <form id="category-form" class="create-form">
-
   <div class="modal-content">
     <!-- {{md-input type="text" value=model.name label="Name"}} -->
-    {{md-input type="text" label="Name"}}
-    <!--First -->
-    <!--Last -->
-    <!--Email -->
-    <!--Ph # -->
-    <!--Interests -> Category Dropdown - Multi-select -->
-    <!--Sitter Need - DRAW IT OUT-->
-    <!--Sitter Capacity Requested-->
-    <!-- Add Child -->
-      <!-- Name + Age + M/F + picture-->
-    <!--Describe Your needs - Text  -->
-    <!--Budget Rate Dropdown w/ $ inputs? Range slider?-->
-    <!--Location - Zip Code? -->
-    <!--Preferred Langauges - list languages + Checkbox  -->
-    <!--Add Payment - Stripe Input -->
-    <!--LAST SCREEN(S) => Terms + legal => agree/accept  -->
+    <div class="row">
+      <div class="col s6 offset-s3">
+        <h1>Client Registration</h1>
+        <!--First -->
+        {{md-input type="text" label="First Name"}}
+        <!--Last -->
+        {{md-input type="text" label="Last Name"}}
+    <!--Email --> <!--Password --><!--Ph # -->
+        {{md-input
+            label='Email'
+            type="email"
+            icon="mdi-content-mail"}}
+        {{md-input label='Password' type="password"}}
+        {{md-input label='Phone' type="tel" icon="mdi-communication-phone"}}
+        <!--Location - Zip Code? -->
+      </div><hr>
+              <!-- NEED BOX -->
+      <div class="col s6 offset-s3">
+        <h1>Need</h1>
+      <!--Interests -> Category Dropdown - Multi-select -->
+      {{ember-chosen
+        content=categories
+        optionLabelPath="name"
+        optionValuePath="id"
+        placeholder="Select Categories"
+        multiple=true
+        }}
+      <!--Sitter Need - DRAW IT OUT-->
+      <!--Sitter Capacity Requested-->
+      <!-- Add Child -->
+        <!-- Name + Age + M/F + picture-->
+        <div class="col s6">
+          <h2>Start Date</h2>
+          {{md-input-date label='Start'}}
+        </div>
+        <div class="col s6">
+          <h2>End Date</h2>
+          {{md-input-date label='End'}}
+        </div>
+      {{md-check name="M-F" checked=checkboxIsSelected}}
+      {{md-check name="Afternoons" checked=checkboxIsSelecte}}
+      {{md-check name="Mornings" checked=checkboxIsSelect}}
+      <!--Preferred Langauges - list languages + Checkbox  -->
+
+      <h4>Languages</h4>
+      {{md-check name="English" checked=checkboxIsSelec}}
+      {{md-check name="Spanish" checked=checkboxIsSele}}
+      {{md-check name="Other" checked=checkboxIsSel}}
+      <h4>Male Or Female</h4>
+      {{#md-radios
+          selection=radioSelection
+          optionValuePath='id'
+          optionLabelPath='text'}}
+          <p>{{md-radio value=1 name="Male"}}</p>
+            <p>{{md-radio value=2 name="Female"}}</p>
+      {{/md-radios}}
+      {{md-textarea label='Notes'
+          value=message}}
+      <!--Describe Your needs - Text  -->
+      <br>
+      </div>
+      <hr>
+      <div class="col s6 offset-s3">
+        <h1>Budget + Add Card</h1>
+        <!--Budget Rate Dropdown w/ $ inputs? Range slider?-->
+        {{md-range value=rangeValue min=50 name="Low"}}
+        {{md-range value=rangeValu min=50 name="High"}}
+        <!--Add Payment - Stripe Input -->
+        <h2>Add Card</h2>
+        <form action="" method="POST">
+          <script
+            src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+            data-key="pk_test_6pRNASCoBOKtIshFeQd4XMUh"
+            data-amount="2000"
+            data-locale="auto">
+          </script>
+        </form>
+      </div>
+      <hr>
+      <!--LAST SCREEN(S) => Terms + legal => agree/accept  -->
+      <div class="col s6 offset-s3">
+        <div class="parent">
+            <h1 class="center">Legally Binding</h1>
+            <div class="scrollContainer">
+                <div class="innerScroll">
+                  1.This is the Details of your Privacy Policy, Terms of Agreement & Whatever other Legal
+                     Mumbo Jumbo. This is the Details of your Privacy Policy, Terms of Agreement &
+                     Whatever other Legal Mumbo Jumbo. This is the Details of your Privacy Policy,
+                     Terms of Agreement & Whatever other Legal Mumbo Jumbo.<hr>
+                 2.This is the Details of your Privacy Policy, Terms of Agreement & Whatever other Legal
+                    Mumbo Jumbo. This is the Details of your Privacy Policy, Terms of Agreement &
+                    Whatever other Legal Mumbo Jumbo. This is the Details of your Privacy Policy,
+                    Terms of Agreement & Whatever other Legal Mumbo Jumbo.<hr>
+                3.This is the Details of your Privacy Policy, Terms of Agreement & Whatever other Legal
+                     Mumbo Jumbo. This is the Details of your Privacy Policy, Terms of Agreement &
+                     Whatever other Legal Mumbo Jumbo. This is the Details of your Privacy Policy,
+                     Terms of Agreement & Whatever other Legal Mumbo Jumbo.
+                </div>
+            </div>
+        </div>
+        <br>
+        <div class="col s6">
+         {{md-check name="I've Read" checked=checkboxIsSelected}}
+        </div>
+        <div class="col s6">
+         {{md-btn text='Accept'
+        action='debug'
+        class='indigo darken-2'}}
+        </div>
+      </div>
+    </div>
   </div>
   <div class="modal-footer">
       <!-- <a class="modal-action modal-close waves-effect waves-orange btn-flat agree-button" {{action 'add'}}> -->
