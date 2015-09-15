@@ -5,9 +5,8 @@
       <span class="quick-view-product" {{action 'openModal' product}}>Quick View</span>
       <div class="product-link-to" {{action 'redirectToItem' product.id}}>
         <img class="product-image" src={{product.images.firstObject.imageUrl}}>
-        <p style="text-align: center;">
-          <strong>{{product.title}}</strong> / Description<br/>
-          ${{product.price}}
+        <p class="product-image-footer">
+          <strong>{{product.title}}</strong> | ${{product.price}} p/ hour
         </p>
       </div>
     </div>

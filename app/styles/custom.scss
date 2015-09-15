@@ -440,3 +440,19 @@ ul.slides {
 .slider-container {
   max-height:300px;
 }
+
+.product-image-footer {
+  position:absolute;
+  bottom:0;
+  left:0;
+  right:0;
+  padding: 1em;
+  z-index:100;
+  background: rgba(#151515, .8);
+  color:white;
+}
+.product-link-to {
+  p {
+    margin-bottom:0;
+  }
+}
