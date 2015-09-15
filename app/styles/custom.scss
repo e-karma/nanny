@@ -115,8 +115,11 @@ select {
 // End of BASE
 
 header {
-  display:flex;
-  justify-content: center;
+
+  ul {
+    display:flex;
+    justify-content: center;
+  }
 }
 
 .sliding-tab-bar {
@@ -147,6 +150,7 @@ header {
 }
 
 .login-form {
+  min-width:350px;
   input {
     color:white;
   }
@@ -232,27 +236,19 @@ header {
 }
 
 
-footer {
-    display: -webkit-box;
-    display: -moz-box;
-    display: -ms-flexbox;
-    display: -webkit-flex;
-    display: flex;
-    -webkit-justify-content: space-around;
-    justify-content: space-around;
+footer.footer-container{
     min-height: 20vh;
     color: #fff;
+    display:flex;
+    justify-content: space-around;
+    .footer-item {
+      .fa {
+        font-size: 300%;
+        margin-top:1em;
+      }
+    }
   }
-.footer-item {
-  width: 250px;
-  height: 100px;
-  margin: 10px 0;
-  text-align: center;
-}
-.fa {
-  font-size: 300%;
-  margin-top:1em;
-}
+
 
 
 
