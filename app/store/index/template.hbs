@@ -15,23 +15,44 @@
   </div>
 {{/store-layout}}
 {{#if modalIsOpen}}
-    {{#md-modal close='closeModal' class="top-0"}}
-        <div class="modal-content">
+    {{#md-modal close='closeModal'}}
+      {{#nanny-select class="top-0"}}
+      <div class="row">
+        <div class="col s6 m4">
           <img class="product-image-modal" src={{modalproduct.images.firstObject.imageUrl}}>
-            <h4>{{modalproduct.title}}</h4>
-            <p>
-              {{modalproduct.description}}<br/><br/>
-              Price: ${{modalproduct.price}}<br/>
-              {{#if modalproduct.inStock}}<span style="color: green;">In Stock</span>{{else}}<span style="color: red;">Out of Stock</span>{{/if}}<br><br>{{#link-to 'store.show' modalproduct}}View full details{{/link-to}}
-            </p>
         </div>
-        <div class="modal-footer">
-            <a class="modal-action modal-close waves-effect waves-orange btn-flat agree-button" {{action 'agree'}}>
-                Done!
-            </a>
-            <a class="modal-action modal-close waves-effect waves-red btn-flat cancel-button" {{action 'closeModal'}}>
-                Cancel
-            </a>
+        <div class="col s2 m1"><a href style="font-size:300%;">{{fa-icon "image"}}</a></div>
+        <div class="col s2 m1"><a href style="font-size:300%;">{{fa-icon "calendar"}}</a></div>
+        <div class="col s2 m1"><a href style="font-size:300%;">{{fa-icon "facebook-square"}}</a></div>
+        <div class="col s2 m1"><a href style="font-size:300%;">{{fa-icon "dollar"}}</a></div>
+        <div class="col s2 m1"><a href style="font-size:300%;">{{fa-icon "youtube-play"}}</a></div>
+        <div class="col s2 m1"><a href style="font-size:300%;">{{fa-icon "certificate"}}</a></div>
+        <div class="col m1 hide-on-small-only"><a href style="font-size:300%;">{{fa-icon "car"}}</a></div>
+        <!-- <div class="col s2 m1"></div> -->
+        <div class="row">
+          <div class="col s12 m6 l4"><h1><strong>{{modalproduct.title}}</strong></h1></div>
+          <div class="col s12 m4 l4"><h1>City, State</h1></div>
         </div>
+          <!-- <a class="modal-action modal-close waves-effect waves-red btn-flat cancel-button" {{action 'closeModal'}}>X</a> -->
+      </div>
+      <div class="top-right"><a href style="font-size:300%;" {{action 'closeModal'}}>{{fa-icon "close"}}</a></div>
+      <div class="row">
+        <div class="col s12 truncate">
+          <p>{{modalproduct.description}}</p>
+        </div>
+      </div>
+      <!-- <p>
+        Price: ${{modalproduct.price}}<br/>
+        {{#if modalproduct.inStock}}<span style="color: green;">In Stock</span>{{else}}<span style="color: red;">Out of Stock</span>{{/if}}<br><br>{{#link-to 'store.show' modalproduct}}View full details{{/link-to}}
+      </p> -->
+      <div class="row">
+        <div class="col s12">
+          <div class="slider-container">
+            {{#material-slider300 style="height:250px;"}}
+            {{/material-slider300}}
+          </div>
+        </div>
+      </div>
+      {{/nanny-select}}
     {{/md-modal}}
 {{/if}}

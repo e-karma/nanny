@@ -1,0 +1,11 @@
+<div class="modal-content">
+  {{yield}}
+</div>
+<div class="modal-footer">
+    <a class="modal-action modal-close waves-effect waves-orange btn-flat agree-button" {{action 'agree'}}>
+        Done!
+    </a>
+    <a class="modal-action modal-close waves-effect waves-red btn-flat cancel-button" {{action 'closeModal'}}>
+        Cancel
+    </a>
+</div>
